@@ -1,24 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-export default (Target, events) => {
-  return class ReactEventOutside extends React.Component {
+export default (events = ['click']) => Target =>
+  class ReactEventOutside extends React.Component {
     constructor(props) {
       super(props);
 
       this.handleEvent = this.handleEvent.bind(this);
     }
 
-    componentDidMount() {}
+    componentDidMount() {
+      events.forEach(event => document.addEventListener(event, this.handleEvent, true));
+    }
 
-    componentWillUnmount() {}
+    componentWillUnmount() {
+      events.forEach(event => document.removeEventListener(event, this.handleEvent, true));
+    }
 
     handleEvent(e) {
-
+      if ((!this.wrap || !this.wrap.contains(e.target)) &&
+        typeof this.target.handleEvent === 'function') {
+        this.target.handleEvent(e);
+      }
     }
 
     render() {
-      return <Target {...this.props} ref={node => this.node = node} />;
+      return (
+        <div ref={node => this.wrap = node}>
+          <Target {...this.props} ref={node => this.target = node} />
+        </div>
+      );
     }
   };
-};
