@@ -5,6 +5,10 @@
   "main": "dist/index.js",
   "author": "Ruslan Karaev",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yondepo/react-event-outside.git"
+  },
   "keywords": [
     "react",
     "event",
