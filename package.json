@@ -4,10 +4,9 @@
   "description": "HOC",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
     "lint": "eslint src/",
-    "build": "mkdir -p dist && babel src/index.js --out-file dist/index.js"
+    "build": "mkdir -p dist && babel src/index.js --out-file dist/index.js",
+    "prepublish": "npm run build"
   },
   "author": "Ruslan Karaev",
   "license": "ISC",
