@@ -1,15 +1,22 @@
 {
   "name": "react-event-outside",
   "version": "1.1.0",
-  "description": "HOC",
+  "description": "A Higher Order Component for listening mouse events outside of the component",
   "main": "dist/index.js",
+  "author": "Ruslan Karaev",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "event",
+    "hoc",
+    "outside",
+    "mouse"
+  ],
   "scripts": {
     "lint": "eslint src/",
     "build": "mkdir -p dist && babel src/index.js --out-file dist/index.js",
     "prepublish": "npm run build"
   },
-  "author": "Ruslan Karaev",
-  "license": "ISC",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.14.0",
