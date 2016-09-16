@@ -5,18 +5,19 @@ A Higher Order Component for listening mouse events outside of the component
 
 ## Usage
 
-Installation
 
+Installation
 ```
 npm install react-event-outside --save
 ```
 
-Basic usage:
 
+Basic usage:
 ```js
 ReactEventOutside()(Component) /* listening for default "click" event */
 ReactEventOutside(['wheel', 'dblclick'])(Component) /* listening for "wheel" and "dblclick" events */
 ```
+
 
 Using ES6:
 ```js
