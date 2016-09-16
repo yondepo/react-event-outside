@@ -2,6 +2,8 @@
 
 A Higher Order Component for listening mouse events outside of the component
 
+It's uses callback refs instead of ``` ReactDOM.findDOMNode() ``` ([why](https://github.com/yannickcr/eslint-plugin-react/issues/678#issue-165177220)).
+
 
 ## Usage
 
